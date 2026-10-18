@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinema Village</title>
+  <title>Cinema Village - Accueil</title>
+  <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-  <h1>Cinema Village</h1>
+  <header>
+    <a href="index.html" class="logo">🎬 Cinema Village</a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="search.html">Rechercher</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Films tendances</h2>
+    <p id="trending-message" class="message">Chargement...</p>
+    <div id="trending" class="movie-grid"></div>
+
+    <h2>Films de 2024</h2>
+    <div id="movies-2024" class="movie-grid"></div>
+    <button id="load-more" class="btn">Charger plus de films de 2024</button>
+  </main>
+
   <script type="module" src="/src/js/pages/home.js"></script>
 </body>
 </html>

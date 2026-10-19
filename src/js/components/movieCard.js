@@ -1,4 +1,4 @@
-const NO_POSTER = "https://placehold.co/300x450?text=Pas+d%27affiche";
+export const NO_POSTER = "https://placehold.co/300x450?text=Pas+d%27affiche";
 
 // Crée et renvoie une carte HTML pour un film
 export function createMovieCard(movie) {

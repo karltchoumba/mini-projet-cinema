@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Village - Détail du film</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">🎬 Cinema Village</a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="search.html">Rechercher</a>
+    </nav>
+  </header>
+
+  <main>
+    <p id="message" class="message">Chargement...</p>
+
+    <article id="movie" class="movie-details" hidden>
+      <img id="movie-poster" alt="">
+
+      <div class="movie-info">
+        <h1 id="movie-title"></h1>
+        <p class="movie-meta">
+          <span id="movie-year"></span> · <span id="movie-runtime"></span>
+        </p>
+
+        <h2>Genre</h2>
+        <p id="movie-genre"></p>
+
+        <h2>Résumé</h2>
+        <p id="movie-plot"></p>
+
+        <h2>Acteurs</h2>
+        <p id="movie-actors"></p>
+
+        <h2>Notes</h2>
+        <ul id="movie-ratings"></ul>
+
+        <h2>Sortie en DVD</h2>
+        <p id="movie-dvd"></p>
+
+        <a href="index.html" class="btn-back">← Retour à l'accueil</a>
+      </div>
+    </article>
+  </main>
+
+  <script type="module" src="/src/js/pages/movie.js"></script>
+</body>
+</html>

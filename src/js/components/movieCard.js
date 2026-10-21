@@ -19,11 +19,11 @@ export function createMovieCard(movie) {
   title.textContent = `${movie.Title} (${movie.Year})`;
   body.append(title);
 
-  // Le résumé, seulement s'il existe (bonus)
+  // Le résumé, seulement s'il existe
   if (movie.Plot && movie.Plot !== "N/A") {
-    const plot = document.createElement("p");
-    plot.textContent = movie.Plot;
-    body.append(plot);
+    const resume = document.createElement("p");
+    resume.textContent = movie.Plot;
+    body.append(resume);
   }
 
   // Le lien vers la page détail

@@ -3,7 +3,7 @@ const MONTHS = {
   Jul: "07", Aug: "08", Sep: "09", Oct: "10", Nov: "11", Dec: "12",
 };
 
-// "08 Dec 2015" -> "08/12/2015"
+// "23 Oct 2026" -> "23/10/2026"
 export function formatDateFr(omdbDate) {
   if (!omdbDate || omdbDate === "N/A") {
     return "Non disponible";

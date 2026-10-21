@@ -1,8 +1,8 @@
 import { getMovieById, searchMovies } from "../api/omdb.js";
 import { createMovieCard } from "../components/movieCard.js";
 
-// Les films que l'on considère "tendance" (leurs identifiants IMDb)
-const TRENDING_IDS = [
+// Les films que l'on considère "tendance" 
+const Tab_ID = [
   "tt15239678", // Dune: Part Two
   "tt6263850",  // Deadpool & Wolverine
   "tt22022452", // Inside Out 2
@@ -12,28 +12,28 @@ const TRENDING_IDS = [
 ];
 
 // On récupère les éléments de la page
-const trendingContainer = document.querySelector("#trending");
-const trendingMessage = document.querySelector("#trending-message");
-const container2024 = document.querySelector("#movies-2024");
-const loadMoreButton = document.querySelector("#load-more");
+const zonetendance = document.querySelector("#tendance");
+const Message = document.querySelector("#trending-message");
+const zone2024 = document.querySelector("#movies-2024");
+const loadMoreButton = document.querySelector("#charger");
 
-// ----- Films tendances -----
+// Films tendances
 async function loadTrending() {
   try {
     const movies = await Promise.all(
-      TRENDING_IDS.map((id) => getMovieById(id, "short"))
+      Tab_ID.map((id) => getMovieById(id, "short"))
     );
 
-    trendingMessage.remove();
+    Message.remove();
     movies.forEach((movie) => {
-      trendingContainer.append(createMovieCard(movie));
+    zonetendance.append(createMovieCard(movie));
     });
   } catch (error) {
-    trendingMessage.textContent = "Impossible de charger les films : " + error.message;
+    Message.textContent = "Impossible de charger les films : " + error.message;
   }
 }
 
-// ----- Films de 2024 (bouton "charger plus") -----
+// Films de 2024 
 let page2024 = 0;
 
 async function loadMore2024() {
@@ -43,10 +43,10 @@ async function loadMore2024() {
   try {
     const { movies, total } = await searchMovies("love", page2024, 2024);
     movies.forEach((movie) => {
-      container2024.append(createMovieCard(movie));
+      zone2024.append(createMovieCard(movie));
     });
 
-    // S'il n'y a plus de films à charger, on cache le bouton
+    
     if (page2024 * 10 >= total) {
       loadMoreButton.hidden = true;
     }

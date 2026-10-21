@@ -1,8 +1,6 @@
-// Ta clé est lue dans le fichier .env (grâce à Vite)
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 const BASE_URL = "https://www.omdbapi.com/";
 
-// Fonction "interne" : envoie une requête à OMDb et renvoie les données
 async function request(params) {
   const url = new URL(BASE_URL);
   url.searchParams.set("apikey", API_KEY);

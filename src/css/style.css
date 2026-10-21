@@ -210,3 +210,72 @@ header .logo {
 .btn-back:hover {
   text-decoration: underline;
 }
+
+
+
+.intro h1 {
+  margin-bottom: 20px;
+  color: var(--green-light);
+  text-align: center;
+}
+
+/* Le formulaire de recherche */
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.search label {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+#chercher {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--brown-card);
+  color: var(--text);
+  border: 2px solid var(--brown-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#chercher::placeholder {
+  color: var(--text-muted);
+}
+
+#chercher:focus {
+  outline: none;
+  border-color: var(--green-light);
+}
+
+#resultats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+
+#plus {
+  display: block;
+  margin: 32px auto;
+  padding: 12px 24px;
+  background-color: var(--green);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#plus:hover {
+  background-color: var(--green-hover);
+}
+
+#plus:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}

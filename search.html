@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche</title>
+    <script type="module" src="search.js"></script>
+</head>
+<body>
+    <header>
+    <a href="index.html" class="logo">🎬 Cinema Village</a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="search.html">Rechercher</a>
+    </nav>
+  </header>
+
+    <main>
+        <section class="intro">
+            <h1>Rechercher un film</h1>
+            <form id="fchercher" class="search" action="#">
+                <label for="chercher">Titre du film :</label>
+                <input id="chercher" type="search" placeholder="Guardians of the Galaxy" autofocus>
+            </form>
+            <div id="resultats"></div>
+            <button id="plus" hidden>Charger plus</button>
+        </section>
+    </main>
+</body>
+</html>

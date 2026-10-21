@@ -279,3 +279,12 @@ header .logo {
   opacity: 0.5;
   cursor: wait;
 }
+#resultats a {
+  color: var(--green-light);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#resultats a:hover {
+  text-decoration: underline;
+}

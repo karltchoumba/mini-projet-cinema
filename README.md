@@ -15,7 +15,7 @@ https://github.com/karltchoumba/mini-projet-cinema
 ## Lancer le projet
 
 1. `npm install`
-2. Créer un fichier `.env` à la racine contenant : `VITE_OMDB_API_KEY=c6abea80`
+2. Créer un fichier `.env` à la racine contenant : `VITE_OMDB_API_KEY=La_cle` (la clé est fournie dans le fichier .env du rendu Moodle)
 3. `npm start`
 4. Ouvrir http://localhost:5173
 
